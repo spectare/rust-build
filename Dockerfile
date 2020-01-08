@@ -7,7 +7,8 @@ RUN sudo apt-get update && \
     xz-utils pkg-config python
 
 ENV KCOV_VERSION 37
-RUN wget https://github.com/SimonKagstrom/kcov/archive/v$KCOV_VERSION.tar.gz && \
+RUN cd /tmp && \
+    wget https://github.com/SimonKagstrom/kcov/archive/v$KCOV_VERSION.tar.gz && \
     tar xzf v$KCOV_VERSION.tar.gz && \
     rm v$KCOV_VERSION.tar.gz && \
     cd kcov-$KCOV_VERSION && \
