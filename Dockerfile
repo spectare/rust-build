@@ -13,7 +13,7 @@ RUN cd /tmp && \
     rm v$KCOV_VERSION.tar.gz && \
     cd kcov-$KCOV_VERSION && \
     mkdir build && cd build && \
-    cmake .. && make && sudo make install && \
+    cmake -DCMAKE_BUILD_TYPE=Release .. && make && sudo make install && \
     cd ../.. && rm -rf kcov-$KCOV_VERSION
 
 ENV RUSTFLAGS "-C link-dead-code"
