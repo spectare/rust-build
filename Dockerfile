@@ -22,4 +22,6 @@ RUN rustup install nightly
 
 RUN rustup default stable
 
+RUN rustup component add rustfmt
+
 ENV RUSTFLAGS "-C link-dead-code"
