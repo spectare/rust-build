@@ -24,4 +24,6 @@ RUN rustup default stable
 
 RUN rustup component add rustfmt
 
+RUN cargo install cargo-tarpaulin
+
 ENV RUSTFLAGS "-C link-dead-code"
