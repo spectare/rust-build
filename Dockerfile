@@ -16,4 +16,10 @@ RUN cd /tmp && \
     cmake -DCMAKE_BUILD_TYPE=Release .. && make && sudo make install && \
     cd ../.. && rm -rf kcov-$KCOV_VERSION
 
+RUN rustup install stable
+
+RUN rustup install nightly
+
+RUN rustup default stable
+
 ENV RUSTFLAGS "-C link-dead-code"
