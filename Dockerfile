@@ -1,4 +1,4 @@
-FROM cimg/rust:1.56
+FROM cimg/rust:1.57
 
 RUN sudo apt-get update && \
     sudo apt-get install -y curl file gcc g++ git make openssh-client \
