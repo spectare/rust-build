@@ -28,7 +28,7 @@ workflows:
   ci:
     jobs:
       - release-build:
-          context: automation-context
+          context: DOCKER
           filters:
             tags:
               only: /.*/
